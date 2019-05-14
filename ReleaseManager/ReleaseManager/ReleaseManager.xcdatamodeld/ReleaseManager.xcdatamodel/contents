@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G5019" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="FeatureManagedObject" representedClassName="FeatureManagedObject" syncable="YES">
+        <attribute name="feature_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feature_key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status_reason" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="NewsManagedObject" representedClassName="NewsManagedObject" syncable="YES">
+        <attribute name="newsDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="newsHeader" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newsText" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ReleaseManagedObject" representedClassName="ReleaseManagedObject" syncable="YES">
+        <attribute name="date_check" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="date_ff" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="date_publish" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="platform" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="release_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="FeatureManagedObject" positionX="-54" positionY="36" width="128" height="120"/>
+        <element name="NewsManagedObject" positionX="-36" positionY="63" width="128" height="105"/>
+        <element name="ReleaseManagedObject" positionX="-63" positionY="-18" width="128" height="150"/>
+    </elements>
+</model>
