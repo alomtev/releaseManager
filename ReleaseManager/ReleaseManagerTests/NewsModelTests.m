@@ -7,8 +7,14 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
+
+#import "../ReleaseManager/NewsModel.h"
+#import "../ReleaseManager/NewsNetworkService.h"
 
 @interface NewsModelTests : XCTestCase
+
+@property (nonatomic, strong) NewsModel *newsModel;
 
 @end
 
@@ -16,18 +22,29 @@
 
 - (void)setUp
 {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    [super setUp];
+    self.newsModel = [NewsModel new];
 }
 
 - (void)tearDown
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    self.newsModel = nil;
+    [super tearDown];
 }
 
 - (void)testLoadNews
 {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    // arrange
+    NewsNetworkService *newsNetwork = OCMStrictClassMock([NewsNetworkService class]);
+    self.newsModel.networkService = newsNetwork;
+    OCMStub([newsNetwork loadNews]);
+    OCMStub([newsNetwork setDelegate:self.newsModel]);
+    
+    // act
+    [self.newsModel loadNews];
+    
+    // assert
+    OCMVerify([newsNetwork loadNews]);
 }
 
 @end

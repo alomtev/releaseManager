@@ -29,6 +29,7 @@
     [self createTableView];
     
     self.model = [NewsModel new];
+    self.model.networkService = [NewsNetworkService new];
     self.model.delegate = self;
     [self.model loadNews];
 }

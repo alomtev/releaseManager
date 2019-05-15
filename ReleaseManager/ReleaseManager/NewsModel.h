@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "NewsNetworkServiceDelegate.h"
 #import "NewsViewDelegate.h"
+#include "NewsNetworkService.h"
 
 @import CoreData;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NewsModel : NSObject
+@interface NewsModel : NSObject<NewsNetworkServiceDelegate, NSFetchedResultsControllerDelegate>
 
+@property (nonatomic, strong) NewsNetworkService *networkService;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedNewsController;
 @property (nonatomic, weak) id<NewsViewDelegate> delegate; /**< Делегат внешних событий */
 

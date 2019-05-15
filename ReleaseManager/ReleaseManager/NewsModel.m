@@ -11,7 +11,7 @@
 #import "NewsManagedObject+CoreDataClass.h"
 #import "NewsNetworkService.h"
 
-@interface NewsModel ()<NewsNetworkServiceDelegate, NSFetchedResultsControllerDelegate>
+@interface NewsModel ()
 
 @end
 
@@ -20,9 +20,12 @@
 
 - (void)loadNews
 {
-    NewsNetworkService *networkService = [NewsNetworkService new];
-    networkService.delegate = self;
-    [networkService loadNews];
+    if(!self.networkService)
+    {
+        return;
+    }
+    self.networkService.delegate = self;
+    [self.networkService loadNews];
 }
 
 - (NSFetchedResultsController *)fetchedNewsController
