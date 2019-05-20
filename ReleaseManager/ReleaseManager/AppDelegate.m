@@ -8,10 +8,11 @@
 
 #import "AppDelegate.h"
 #import "NewsViewController.h"
-#import "NewFeatureViewController.h"
 #import "ReleaseViewController.h"
 
-@interface AppDelegate ()
+@import UserNotifications;
+
+@interface AppDelegate () <UNUserNotificationCenterDelegate>
 
 @end
 
@@ -24,32 +25,43 @@
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     
     NewsViewController *newsVC = [[NewsViewController alloc] init];
-    //newsVC.tabBarItem.title = @"Новости";
-    //redVC.tabBarItem.image = [UIImage imageNamed:@"zodiak2"];
     UINavigationController* navControllerNews = [[UINavigationController alloc]
                                              initWithRootViewController:newsVC];
     navControllerNews.tabBarItem.title = @"Новости";
-    
-    NewFeatureViewController *newFeatureVC = [[NewFeatureViewController alloc] init];
-    newFeatureVC.tabBarItem.title = @"Новая фича";
-    //greenVC.tabBarItem.image = [UIImage imageNamed:@"zodiak3"];
+    [navControllerNews.tabBarItem setBadgeColor:[UIColor whiteColor]];
     
     ReleaseViewController *releaseVC = [[ReleaseViewController alloc] init];
-    releaseVC.tabBarItem.title = @"Релизы";
-    //blueVC.tabBarItem.image = [UIImage imageNamed:@"zodiak4"];
-    //blueVC.tabBarItem.selectedImage = [UIImage imageNamed:@"zodiak2"];
+    UINavigationController* navControllerRelease = [[UINavigationController alloc]
+                                                 initWithRootViewController:releaseVC];
+    navControllerRelease.tabBarItem.title = @"Релизы";
+    [navControllerRelease.tabBarItem setBadgeColor:[UIColor whiteColor]];
     
-    NSArray *viewControllerArray = @[navControllerNews, newFeatureVC,  releaseVC];
+    NSArray *viewControllerArray = @[navControllerNews, navControllerRelease];
     UITabBarController *tabBarViewController = [[UITabBarController alloc] init];
     tabBarViewController.tabBar.translucent = YES;
     tabBarViewController.tabBar.tintColor = [UIColor whiteColor];
-    tabBarViewController.tabBar.barTintColor = [UIColor yellowColor];
+    tabBarViewController.tabBar.barTintColor = [UIColor grayColor];
     
     tabBarViewController.viewControllers = viewControllerArray;
     //tabBarViewController.selectedIndex = 1;
     self.window.rootViewController = tabBarViewController;
     [self.window makeKeyAndVisible];
 
+    
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    
+    center.delegate = self;
+    
+    // битовая маска
+    UNAuthorizationOptions options = UNAuthorizationOptionSound | UNAuthorizationOptionAlert
+    | UNAuthorizationOptionBadge;
+    
+    [center requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * _Nullable error){
+        if (!granted)
+        {
+            NSLog(@"Дали доступ!");
+        }
+    }];
     
     return YES;
 }

@@ -11,11 +11,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ Класс - сетевой слой для получения списка новостей
+ */
 @interface NewsNetworkService : NSObject
 
-@property (nonatomic, weak) id<NewsNetworkServiceDelegate> delegate; /**< Делегат внешних событий */
+@property (nonatomic, weak) id<NewsNetworkServiceDelegate> delegate; /**< Делегат для обработки ответа */
 
-- (void)loadNews;
+- (void)loadNews;   /**< Метод загрузки списка новостей */
 
 @end
 

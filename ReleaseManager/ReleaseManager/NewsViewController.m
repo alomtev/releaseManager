@@ -11,9 +11,8 @@
 #import "NewsManagedObject+CoreDataClass.h"
 #import "NewsDetailsViewController.h"
 
-@interface NewsViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface NewsViewController ()
 
-@property (nonatomic, strong) NSManagedObjectContext *coreDataContext;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NewsModel *model;
 
@@ -69,13 +68,6 @@
     [self.view addSubview:self.tableView];
 }
 
-#pragma mark - NewsViewDelegate
-
-- (void)prosessNews:(NSArray<DTONews *> *)list
-{
-    
-}
-
 #pragma mark - UITableView Delegate/DataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -90,7 +82,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //??? как перейти на DTO?
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"news"];
     if (!cell)
     {
@@ -111,7 +102,6 @@
     NewsManagedObject *newsMO = [self.model.fetchedNewsController objectAtIndexPath:indexPath];
     if (newsMO)
     {
-        //[self.fetchedResultsController.managedObjectContext deleteObject:person];
         DTONews *dtoNews = [DTONews new];
         dtoNews.newsId = newsMO.newsId;
         dtoNews.newsHeader = newsMO.newsHeader;
@@ -123,5 +113,13 @@
         [self.navigationController pushViewController:newsDetailsViewController animated:YES];
     }
 }
+
+#pragma mark - NewsViewDelegate
+
+- (void)newsListChanged
+{
+    [self updateTableView];
+}
+
 
 @end

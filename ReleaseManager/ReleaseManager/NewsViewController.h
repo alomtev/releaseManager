@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NewsViewController : UIViewController<NewsViewDelegate>
+@interface NewsViewController : UIViewController<NewsViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @end
 

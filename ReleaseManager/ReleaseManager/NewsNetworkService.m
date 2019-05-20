@@ -13,8 +13,6 @@
 
 - (void)loadNews
 {
-    // URLSessionConfiguration ?
-    // sessionWithConfiguration??
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:@"https://private-21df71-myhost.apiary-mock.com/news"] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error)

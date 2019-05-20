@@ -6,10 +6,8 @@
 //  Copyright © 2019 Александр Ломтев. All rights reserved.
 //
 
-#import "DTONews.h"
-
 @protocol NewsViewDelegate <NSObject>
 
-- (void)prosessNews:(NSArray<DTONews *> *)list;
+- (void)newsListChanged;
 
 @end

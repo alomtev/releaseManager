@@ -8,15 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface DTONews : NSObject
 
-@property (nullable, nonatomic, copy) NSDate *newsDate;
-@property (nullable, nonatomic, copy) NSString *newsHeader;
-@property (nullable, nonatomic, copy) NSString *newsId;
+@property (nonnull, nonatomic, copy) NSDate *newsDate;
+@property (nonnull, nonatomic, copy) NSString *newsHeader;
+@property (nonnull, nonatomic, copy) NSString *newsId;
 @property (nullable, nonatomic, copy) NSString *newsText;
 
 @end
-
-NS_ASSUME_NONNULL_END

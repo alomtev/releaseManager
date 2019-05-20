@@ -28,6 +28,30 @@
     [self.networkService loadNews];
 }
 
+- (void)clearNews
+{
+    NSError *err;
+    [self.fetchedNewsController performFetch:&err];
+    if(err)
+    {
+        NSLog(@"%@", err);
+    }
+    if(self.fetchedNewsController.fetchedObjects.count > 0)
+    {
+        for(NewsManagedObject *news in self.fetchedNewsController.fetchedObjects)
+        {
+            [self.coreDataContext deleteObject:news];
+            if (![news isDeleted])
+            {
+                NSLog(@"Не удалось удалить объект");
+            }
+        }
+        [self.coreDataContext save:nil];
+    }
+}
+
+#pragma mark - CoreData
+
 - (NSFetchedResultsController *)fetchedNewsController
 {
     
@@ -68,51 +92,45 @@
 {
     NSDictionary *newsJson = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     NSArray<NSDictionary *> *newsArray = [newsJson valueForKeyPath:@"news"][0];
-    for (NSDictionary *news in newsArray)
+    if(newsArray.count > 0)
     {
-        // ???  Сразу превратить json в NewsManagedObject?
-        NSString *news_id = news[@"news_id"];
-        NSString *news_header = news[@"news_header"];
-        NSString *news_text = news[@"news_text"];
-        
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-        [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"ru_RU"]];
-        NSDate *news_date = [dateFormatter dateFromString: news[@"news_date"]];
-        
-        NewsManagedObject *news = [NSEntityDescription insertNewObjectForEntityForName:@"NewsManagedObject" inManagedObjectContext:self.coreDataContext];
-        
-        news.newsId = news_id;
-        news.newsHeader = news_header;
-        news.newsText = news_text;
-        news.newsDate = news_date;
-        
-        NSError *error = nil;
-        if (![news.managedObjectContext save:&error])
-        {
-            NSLog(@"Не удалось сохранить объект");
-            NSLog(@"%@, %@", error, error.localizedDescription);
-        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //  Очищаем старые новости перед загрузкой новых
+            [self clearNews];
+            
+            for (NSDictionary *news in newsArray)
+            {
+                NSString *news_id = news[@"news_id"];
+                NSString *news_header = news[@"news_header"];
+                NSString *news_text = news[@"news_text"];
+                
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+                [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"ru_RU"]];
+                NSDate *news_date = [dateFormatter dateFromString: news[@"news_date"]];
+                
+                NewsManagedObject *news = [NSEntityDescription insertNewObjectForEntityForName:@"NewsManagedObject" inManagedObjectContext:self.coreDataContext];
+                
+                news.newsId = news_id;
+                news.newsHeader = news_header;
+                news.newsText = news_text;
+                news.newsDate = news_date;
+            }
+            NSError *error = nil;
+            if (![self.coreDataContext save:&error])
+            {
+                NSLog(@"Не удалось сохранить объект");
+                NSLog(@"%@, %@", error, error.localizedDescription);
+            }
+        });
     }
 }
 
 # pragma mark - NSFetchedResultsControllerDelegate
 
-- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(nullable NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(nullable NSIndexPath *)newIndexPath
-{
-//    NSLog(@"%@", anObject);
-//    NSLog(@"%lu", type);
-}
-
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
-{
-    NSLog(@"controllerWillChangeContent");
-}
-
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
-    NSLog(@"controllerDidChangeContent");
-    [self.delegate prosessNews:nil];
+    [self.delegate newsListChanged];
 }
 
 @end

@@ -13,9 +13,8 @@
 		3D1ED72A227C9D7C005D9B51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1ED728227C9D7C005D9B51 /* LaunchScreen.storyboard */; };
 		3D1ED72D227C9D7C005D9B51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1ED72C227C9D7C005D9B51 /* main.m */; };
 		3D1ED737227C9D7C005D9B51 /* NewsModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1ED736227C9D7C005D9B51 /* NewsModelTests.m */; };
-		3D1ED742227C9D7C005D9B51 /* ReleaseManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1ED741227C9D7C005D9B51 /* ReleaseManagerUITests.m */; };
+		3D1ED742227C9D7C005D9B51 /* NewsModelUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1ED741227C9D7C005D9B51 /* NewsModelUITests.m */; };
 		3D1ED751227E2DB5005D9B51 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1ED750227E2DB5005D9B51 /* NewsViewController.m */; };
-		3D1ED754227E2DDC005D9B51 /* NewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1ED753227E2DDC005D9B51 /* NewFeatureViewController.m */; };
 		3D1ED757227E2E09005D9B51 /* ReleaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1ED756227E2E09005D9B51 /* ReleaseViewController.m */; };
 		3D1ED78A2281E8C1005D9B51 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1ED7892281E8C1005D9B51 /* NewsModel.m */; };
 		3D5F92CA22870400000BC0DE /* NewsManagedObject+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5F92C822870400000BC0DE /* NewsManagedObject+CoreDataClass.m */; };
@@ -23,6 +22,18 @@
 		3D5F92CE22871233000BC0DE /* NewsNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5F92CD22871233000BC0DE /* NewsNetworkService.m */; };
 		3D5F92D52289BD7D000BC0DE /* DTONews.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5F92D42289BD7D000BC0DE /* DTONews.m */; };
 		3D5F92D8228B0282000BC0DE /* NewsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5F92D7228B0282000BC0DE /* NewsDetailsViewController.m */; };
+		3D5F92DA228C45C8000BC0DE /* TestBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3D5F92D9228C45C8000BC0DE /* TestBundle.bundle */; };
+		3D5F92E42292F1C2000BC0DE /* ReleaseManagedObject+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5F92DE2292F1C2000BC0DE /* ReleaseManagedObject+CoreDataClass.m */; };
+		3D5F92E52292F1C2000BC0DE /* ReleaseManagedObject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5F92DF2292F1C2000BC0DE /* ReleaseManagedObject+CoreDataProperties.m */; };
+		3D5F92E62292F1C2000BC0DE /* FeatureManagedObject+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5F92E22292F1C2000BC0DE /* FeatureManagedObject+CoreDataClass.m */; };
+		3D5F92E72292F1C2000BC0DE /* FeatureManagedObject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5F92E32292F1C2000BC0DE /* FeatureManagedObject+CoreDataProperties.m */; };
+		3D5F92EA2292F2B2000BC0DE /* ReleaseNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5F92E92292F2B2000BC0DE /* ReleaseNetworkService.m */; };
+		3D5F92ED2292F332000BC0DE /* FeatureNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5F92EC2292F332000BC0DE /* FeatureNetworkService.m */; };
+		3D5F92F22292FF9F000BC0DE /* DTORelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5F92F12292FF9F000BC0DE /* DTORelease.m */; };
+		3D5F92F52292FFB1000BC0DE /* DTOFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5F92F42292FFB1000BC0DE /* DTOFeature.m */; };
+		3D5F92F8229302AA000BC0DE /* ReleaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5F92F7229302AA000BC0DE /* ReleaseModel.m */; };
+		3D5F92FB229302C0000BC0DE /* FeatureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5F92FA229302BF000BC0DE /* FeatureModel.m */; };
+		3D5F930122934193000BC0DE /* ReleaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5F930022934193000BC0DE /* ReleaseCollectionViewCell.m */; };
 		9289F48CC939A92F92F2EA24 /* libPods-ReleaseManagerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC20FEF0D8C57291C0549D1 /* libPods-ReleaseManagerUITests.a */; };
 		D7815FFD62C92D6414BED6E5 /* libPods-ReleaseManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 977314F0800DC55C314C495E /* libPods-ReleaseManager.a */; };
 		E3FE2F04553A4B77D75D4AD9 /* libPods-ReleaseManagerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C969DF8C7352E08339E638AF /* libPods-ReleaseManagerTests.a */; };
@@ -58,12 +69,10 @@
 		3D1ED736227C9D7C005D9B51 /* NewsModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsModelTests.m; sourceTree = "<group>"; };
 		3D1ED738227C9D7C005D9B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D1ED73D227C9D7C005D9B51 /* ReleaseManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReleaseManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D1ED741227C9D7C005D9B51 /* ReleaseManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseManagerUITests.m; sourceTree = "<group>"; };
+		3D1ED741227C9D7C005D9B51 /* NewsModelUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsModelUITests.m; sourceTree = "<group>"; };
 		3D1ED743227C9D7C005D9B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D1ED74F227E2DB5005D9B51 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		3D1ED750227E2DB5005D9B51 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
-		3D1ED752227E2DDC005D9B51 /* NewFeatureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewFeatureViewController.h; sourceTree = "<group>"; };
-		3D1ED753227E2DDC005D9B51 /* NewFeatureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewFeatureViewController.m; sourceTree = "<group>"; };
 		3D1ED755227E2E09005D9B51 /* ReleaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseViewController.h; sourceTree = "<group>"; };
 		3D1ED756227E2E09005D9B51 /* ReleaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseViewController.m; sourceTree = "<group>"; };
 		3D1ED7882281E8C1005D9B51 /* NewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
@@ -75,11 +84,37 @@
 		3D5F92CC22871233000BC0DE /* NewsNetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsNetworkService.h; sourceTree = "<group>"; };
 		3D5F92CD22871233000BC0DE /* NewsNetworkService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsNetworkService.m; sourceTree = "<group>"; };
 		3D5F92CF22871EA5000BC0DE /* NewsNetworkServiceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsNetworkServiceDelegate.h; sourceTree = "<group>"; };
-		3D5F92D22289BD1F000BC0DE /* NewsViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewDelegate.h; sourceTree = "<group>"; };
 		3D5F92D32289BD7D000BC0DE /* DTONews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTONews.h; sourceTree = "<group>"; };
 		3D5F92D42289BD7D000BC0DE /* DTONews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTONews.m; sourceTree = "<group>"; };
 		3D5F92D6228B0282000BC0DE /* NewsDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsDetailsViewController.h; sourceTree = "<group>"; };
 		3D5F92D7228B0282000BC0DE /* NewsDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDetailsViewController.m; sourceTree = "<group>"; };
+		3D5F92D9228C45C8000BC0DE /* TestBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TestBundle.bundle; sourceTree = "<group>"; };
+		3D5F92DC2292F1C2000BC0DE /* ReleaseManagedObject+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReleaseManagedObject+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3D5F92DD2292F1C2000BC0DE /* ReleaseManagedObject+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReleaseManagedObject+CoreDataClass.h"; sourceTree = "<group>"; };
+		3D5F92DE2292F1C2000BC0DE /* ReleaseManagedObject+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ReleaseManagedObject+CoreDataClass.m"; sourceTree = "<group>"; };
+		3D5F92DF2292F1C2000BC0DE /* ReleaseManagedObject+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ReleaseManagedObject+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3D5F92E02292F1C2000BC0DE /* FeatureManagedObject+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeatureManagedObject+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3D5F92E12292F1C2000BC0DE /* FeatureManagedObject+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeatureManagedObject+CoreDataClass.h"; sourceTree = "<group>"; };
+		3D5F92E22292F1C2000BC0DE /* FeatureManagedObject+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FeatureManagedObject+CoreDataClass.m"; sourceTree = "<group>"; };
+		3D5F92E32292F1C2000BC0DE /* FeatureManagedObject+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FeatureManagedObject+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3D5F92E82292F2B2000BC0DE /* ReleaseNetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseNetworkService.h; sourceTree = "<group>"; };
+		3D5F92E92292F2B2000BC0DE /* ReleaseNetworkService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseNetworkService.m; sourceTree = "<group>"; };
+		3D5F92EB2292F332000BC0DE /* FeatureNetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeatureNetworkService.h; sourceTree = "<group>"; };
+		3D5F92EC2292F332000BC0DE /* FeatureNetworkService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeatureNetworkService.m; sourceTree = "<group>"; };
+		3D5F92EE2292F3C3000BC0DE /* ReleaseNetworkServiceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseNetworkServiceDelegate.h; sourceTree = "<group>"; };
+		3D5F92EF2292F3D4000BC0DE /* FeatureNetworkServiceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeatureNetworkServiceDelegate.h; sourceTree = "<group>"; };
+		3D5F92F02292FF9F000BC0DE /* DTORelease.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTORelease.h; sourceTree = "<group>"; };
+		3D5F92F12292FF9F000BC0DE /* DTORelease.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTORelease.m; sourceTree = "<group>"; };
+		3D5F92F32292FFB1000BC0DE /* DTOFeature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTOFeature.h; sourceTree = "<group>"; };
+		3D5F92F42292FFB1000BC0DE /* DTOFeature.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTOFeature.m; sourceTree = "<group>"; };
+		3D5F92F6229302AA000BC0DE /* ReleaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseModel.h; sourceTree = "<group>"; };
+		3D5F92F7229302AA000BC0DE /* ReleaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseModel.m; sourceTree = "<group>"; };
+		3D5F92F9229302BF000BC0DE /* FeatureModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeatureModel.h; sourceTree = "<group>"; };
+		3D5F92FA229302BF000BC0DE /* FeatureModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeatureModel.m; sourceTree = "<group>"; };
+		3D5F92FC22931804000BC0DE /* NewsViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewDelegate.h; sourceTree = "<group>"; };
+		3D5F92FE229323BF000BC0DE /* ReleaseViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseViewDelegate.h; sourceTree = "<group>"; };
+		3D5F92FF22934193000BC0DE /* ReleaseCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseCollectionViewCell.h; sourceTree = "<group>"; };
+		3D5F930022934193000BC0DE /* ReleaseCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseCollectionViewCell.m; sourceTree = "<group>"; };
 		54E352DE43DF4075764072EB /* Pods-ReleaseManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReleaseManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-ReleaseManagerTests/Pods-ReleaseManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5895B6F4F80DA4E011C3D163 /* Pods-ReleaseManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReleaseManagerUITests.release.xcconfig"; path = "Target Support Files/Pods-ReleaseManagerUITests/Pods-ReleaseManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7B0D3B2A239C3C3EA6EF0DB8 /* Pods-ReleaseManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReleaseManager.debug.xcconfig"; path = "Target Support Files/Pods-ReleaseManager/Pods-ReleaseManager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,7 +189,6 @@
 				3D1ED728227C9D7C005D9B51 /* LaunchScreen.storyboard */,
 				3D1ED72B227C9D7C005D9B51 /* Info.plist */,
 				3D1ED72C227C9D7C005D9B51 /* main.m */,
-				3D1ED723227C9D79005D9B51 /* ReleaseManager.xcdatamodeld */,
 			);
 			path = ReleaseManager;
 			sourceTree = "<group>";
@@ -163,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				3D1ED736227C9D7C005D9B51 /* NewsModelTests.m */,
+				3D5F92DB228C45DE000BC0DE /* Resouces */,
 				3D1ED738227C9D7C005D9B51 /* Info.plist */,
 			);
 			path = ReleaseManagerTests;
@@ -171,7 +206,7 @@
 		3D1ED740227C9D7C005D9B51 /* ReleaseManagerUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3D1ED741227C9D7C005D9B51 /* ReleaseManagerUITests.m */,
+				3D1ED741227C9D7C005D9B51 /* NewsModelUITests.m */,
 				3D1ED743227C9D7C005D9B51 /* Info.plist */,
 			);
 			path = ReleaseManagerUITests;
@@ -180,14 +215,15 @@
 		3D1ED758227E2E17005D9B51 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
-				3D1ED756227E2E09005D9B51 /* ReleaseViewController.m */,
+				3D5F92FD2293180F000BC0DE /* Protocols */,
 				3D1ED74F227E2DB5005D9B51 /* NewsViewController.h */,
 				3D1ED750227E2DB5005D9B51 /* NewsViewController.m */,
-				3D1ED752227E2DDC005D9B51 /* NewFeatureViewController.h */,
-				3D1ED753227E2DDC005D9B51 /* NewFeatureViewController.m */,
 				3D1ED755227E2E09005D9B51 /* ReleaseViewController.h */,
+				3D1ED756227E2E09005D9B51 /* ReleaseViewController.m */,
 				3D5F92D6228B0282000BC0DE /* NewsDetailsViewController.h */,
 				3D5F92D7228B0282000BC0DE /* NewsDetailsViewController.m */,
+				3D5F92FF22934193000BC0DE /* ReleaseCollectionViewCell.h */,
+				3D5F930022934193000BC0DE /* ReleaseCollectionViewCell.m */,
 			);
 			name = UserInterface;
 			sourceTree = "<group>";
@@ -195,10 +231,13 @@
 		3D1ED75C227E3696005D9B51 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3D5F92D12289BCED000BC0DE /* Protocols */,
 				3D1ED78F2281EE43005D9B51 /* DTO */,
 				3D1ED7882281E8C1005D9B51 /* NewsModel.h */,
 				3D1ED7892281E8C1005D9B51 /* NewsModel.m */,
+				3D5F92F6229302AA000BC0DE /* ReleaseModel.h */,
+				3D5F92F7229302AA000BC0DE /* ReleaseModel.m */,
+				3D5F92F9229302BF000BC0DE /* FeatureModel.h */,
+				3D5F92FA229302BF000BC0DE /* FeatureModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -206,10 +245,19 @@
 		3D1ED763227E3A7F005D9B51 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				3D5F92DC2292F1C2000BC0DE /* ReleaseManagedObject+CoreDataProperties.h */,
+				3D5F92DD2292F1C2000BC0DE /* ReleaseManagedObject+CoreDataClass.h */,
+				3D5F92DE2292F1C2000BC0DE /* ReleaseManagedObject+CoreDataClass.m */,
+				3D5F92DF2292F1C2000BC0DE /* ReleaseManagedObject+CoreDataProperties.m */,
+				3D5F92E02292F1C2000BC0DE /* FeatureManagedObject+CoreDataProperties.h */,
+				3D5F92E12292F1C2000BC0DE /* FeatureManagedObject+CoreDataClass.h */,
+				3D5F92E22292F1C2000BC0DE /* FeatureManagedObject+CoreDataClass.m */,
+				3D5F92E32292F1C2000BC0DE /* FeatureManagedObject+CoreDataProperties.m */,
 				3D5F92C622870400000BC0DE /* NewsManagedObject+CoreDataProperties.h */,
 				3D5F92C722870400000BC0DE /* NewsManagedObject+CoreDataClass.h */,
 				3D5F92C822870400000BC0DE /* NewsManagedObject+CoreDataClass.m */,
 				3D5F92C922870400000BC0DE /* NewsManagedObject+CoreDataProperties.m */,
+				3D1ED723227C9D79005D9B51 /* ReleaseManager.xcdatamodeld */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -218,8 +266,12 @@
 			isa = PBXGroup;
 			children = (
 				3D5F92D02289BC6E000BC0DE /* Protocols */,
+				3D5F92E82292F2B2000BC0DE /* ReleaseNetworkService.h */,
+				3D5F92E92292F2B2000BC0DE /* ReleaseNetworkService.m */,
 				3D5F92CC22871233000BC0DE /* NewsNetworkService.h */,
 				3D5F92CD22871233000BC0DE /* NewsNetworkService.m */,
+				3D5F92EB2292F332000BC0DE /* FeatureNetworkService.h */,
+				3D5F92EC2292F332000BC0DE /* FeatureNetworkService.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -229,6 +281,10 @@
 			children = (
 				3D5F92D32289BD7D000BC0DE /* DTONews.h */,
 				3D5F92D42289BD7D000BC0DE /* DTONews.m */,
+				3D5F92F02292FF9F000BC0DE /* DTORelease.h */,
+				3D5F92F12292FF9F000BC0DE /* DTORelease.m */,
+				3D5F92F32292FFB1000BC0DE /* DTOFeature.h */,
+				3D5F92F42292FFB1000BC0DE /* DTOFeature.m */,
 			);
 			name = DTO;
 			sourceTree = "<group>";
@@ -237,14 +293,25 @@
 			isa = PBXGroup;
 			children = (
 				3D5F92CF22871EA5000BC0DE /* NewsNetworkServiceDelegate.h */,
+				3D5F92EE2292F3C3000BC0DE /* ReleaseNetworkServiceDelegate.h */,
+				3D5F92EF2292F3D4000BC0DE /* FeatureNetworkServiceDelegate.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		3D5F92D12289BCED000BC0DE /* Protocols */ = {
+		3D5F92DB228C45DE000BC0DE /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
-				3D5F92D22289BD1F000BC0DE /* NewsViewDelegate.h */,
+				3D5F92D9228C45C8000BC0DE /* TestBundle.bundle */,
+			);
+			name = Resouces;
+			sourceTree = "<group>";
+		};
+		3D5F92FD2293180F000BC0DE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3D5F92FC22931804000BC0DE /* NewsViewDelegate.h */,
+				3D5F92FE229323BF000BC0DE /* ReleaseViewDelegate.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -387,6 +454,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5F92DA228C45C8000BC0DE /* TestBundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5F92E52292F1C2000BC0DE /* ReleaseManagedObject+CoreDataProperties.m in Sources */,
 				3D1ED757227E2E09005D9B51 /* ReleaseViewController.m in Sources */,
 				3D5F92CE22871233000BC0DE /* NewsNetworkService.m in Sources */,
 				3D1ED71C227C9D79005D9B51 /* AppDelegate.m in Sources */,
@@ -482,9 +551,18 @@
 				3D1ED78A2281E8C1005D9B51 /* NewsModel.m in Sources */,
 				3D5F92D52289BD7D000BC0DE /* DTONews.m in Sources */,
 				3D1ED72D227C9D7C005D9B51 /* main.m in Sources */,
+				3D5F930122934193000BC0DE /* ReleaseCollectionViewCell.m in Sources */,
+				3D5F92F52292FFB1000BC0DE /* DTOFeature.m in Sources */,
 				3D5F92CA22870400000BC0DE /* NewsManagedObject+CoreDataClass.m in Sources */,
-				3D1ED754227E2DDC005D9B51 /* NewFeatureViewController.m in Sources */,
+				3D5F92F22292FF9F000BC0DE /* DTORelease.m in Sources */,
+				3D5F92E42292F1C2000BC0DE /* ReleaseManagedObject+CoreDataClass.m in Sources */,
+				3D5F92FB229302C0000BC0DE /* FeatureModel.m in Sources */,
+				3D5F92E62292F1C2000BC0DE /* FeatureManagedObject+CoreDataClass.m in Sources */,
+				3D5F92ED2292F332000BC0DE /* FeatureNetworkService.m in Sources */,
 				3D1ED725227C9D79005D9B51 /* ReleaseManager.xcdatamodeld in Sources */,
+				3D5F92F8229302AA000BC0DE /* ReleaseModel.m in Sources */,
+				3D5F92E72292F1C2000BC0DE /* FeatureManagedObject+CoreDataProperties.m in Sources */,
+				3D5F92EA2292F2B2000BC0DE /* ReleaseNetworkService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D1ED742227C9D7C005D9B51 /* ReleaseManagerUITests.m in Sources */,
+				3D1ED742227C9D7C005D9B51 /* NewsModelUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

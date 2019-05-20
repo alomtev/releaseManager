@@ -35,7 +35,7 @@
 - (void)testLoadNews
 {
     // arrange
-    NewsNetworkService *newsNetwork = OCMStrictClassMock([NewsNetworkService class]);
+    NewsNetworkService *newsNetwork = OCMClassMock([NewsNetworkService class]);
     self.newsModel.networkService = newsNetwork;
     OCMStub([newsNetwork loadNews]);
     OCMStub([newsNetwork setDelegate:self.newsModel]);
@@ -45,6 +45,22 @@
     
     // assert
     OCMVerify([newsNetwork loadNews]);
+}
+
+- (void)testProsessResponse
+{
+    // arrange
+    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestBundle.bundle/news_list" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    
+    // act
+    [self.newsModel prosessResponse:data];
+    NSError *err;
+    [self.newsModel.fetchedNewsController performFetch:&err];
+    
+    // assert
+    XCTAssertNil(err);
+    XCTAssertEqual(self.newsModel.fetchedNewsController.fetchedObjects.count, 3);
 }
 
 @end
